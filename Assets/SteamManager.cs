@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using Steamworks;
 
 public class SteamManager : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class SteamManager : MonoBehaviour
         DontDestroyOnLoad(this);
         try
         {
-            Steamworks.SteamClient.Init(appId, true);
+            SteamClient.Init(appId, true);
             Debug.Log("Steam is up and running!");
         }
         catch(System.Exception e)
